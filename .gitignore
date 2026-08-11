@@ -1,0 +1,4 @@
+dist/
+.wrangler/
+*.tgz
+dev-server*.log
