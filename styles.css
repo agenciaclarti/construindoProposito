@@ -2136,9 +2136,27 @@ blockquote em {
   transition-delay: 240ms;
 }
 
-/* ==========================================================================
+/* ===========================================================================
    Responsive composition
    ========================================================================== */
+
+@media (min-width: 425px) and (max-width: 899px) {
+  .button--header {
+    display: inline-flex;
+    min-height: 40px;
+    padding: 0.5rem 0.72rem;
+    border-color: rgba(18, 203, 229, 0.52);
+    color: var(--blue-bright);
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+
+  .button--header:hover {
+    background: var(--blue-bright);
+    color: var(--black);
+  }
+}
 
 @media (min-width: 640px) {
   :root {
