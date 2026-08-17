@@ -396,17 +396,19 @@ blockquote em {
 
 .mobile-menu {
   position: fixed;
-  z-index: 1;
+  z-index: 99;
   inset: 0;
   display: flex;
+  min-height: 100dvh;
   padding: calc(var(--header-height) + 48px) 24px 32px;
   flex-direction: column;
   visibility: hidden;
   opacity: 0;
+  overscroll-behavior: contain;
   background:
     radial-gradient(circle at 100% 20%, rgba(18, 203, 229, 0.1), transparent 23rem),
     radial-gradient(circle at 0 90%, rgba(10, 154, 182, 0.08), transparent 22rem),
-    rgba(2, 6, 8, 0.985);
+    var(--black);
   transition:
     visibility 0s linear 500ms,
     opacity 500ms ease;
