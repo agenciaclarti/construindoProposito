@@ -1,6 +1,6 @@
 # Assets da identidade
 
-O site utiliza a identidade oficial fornecida em `logo.jfif` no cabeçalho, no rodapé, no encerramento e como favicon.
+O site utiliza `logo.jfif` no cabeçalho, no rodapé e como favicon; a versão `logo-transparent.png` aparece no encerramento para integrar a marca aos efeitos visuais do fundo.
 
 Para futuras versões em outros formatos, use estes nomes:
 
