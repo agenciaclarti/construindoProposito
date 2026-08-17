@@ -2262,7 +2262,7 @@ blockquote em {
    Responsive composition
    ========================================================================== */
 
-@media (min-width: 425px) and (max-width: 899px) {
+@media (min-width: 426px) and (max-width: 899px) {
   .button--header {
     display: inline-flex;
     min-height: 40px;
