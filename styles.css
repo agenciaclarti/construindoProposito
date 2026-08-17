@@ -1523,8 +1523,10 @@ blockquote em {
 }
 
 .founder__bio {
+  display: grid;
   margin-top: 2rem;
   padding-left: 1.5rem;
+  gap: 1rem;
   border-left: 1px solid var(--blue-bright);
 }
 
@@ -1534,6 +1536,29 @@ blockquote em {
   color: var(--gray);
   font-size: clamp(0.9rem, 1.5vw, 1.05rem);
   line-height: 1.9;
+}
+
+.founder__quote {
+  display: grid;
+  max-width: 680px;
+  margin: 0.65rem 0 0;
+  gap: 0.65rem;
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  font-style: italic;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.founder__quote span {
+  color: var(--gold-accent-light);
+  font-family: var(--font-sans);
+  font-size: 0.58rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
 }
 
 /* Programação */
