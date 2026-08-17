@@ -1,12 +1,12 @@
 # Assets da identidade
 
-O site já possui uma assinatura tipográfica e um símbolo geométrico em HTML/CSS para funcionar sem dependências de imagem.
+O site utiliza a identidade oficial fornecida em `logo.jfif` no cabeçalho, no rodapé, no encerramento e como favicon.
 
-Quando os arquivos oficiais estiverem disponíveis, adicione-os aqui com estes nomes:
+Para futuras versões em outros formatos, use estes nomes:
 
 - `logo-construindo-proposito.webp`
 - `logo-construindo-proposito.png`
 - `og-cover.jpg`
 - `favicon.svg`
 
-O `favicon.svg` e a imagem social são entregues nesta primeira versão. As versões oficiais da logo não foram inventadas: o layout está preparado para incorporá-las depois.
+O `favicon.svg` anterior foi preservado apenas como arquivo histórico; o site agora referencia a logo oficial.

@@ -256,41 +256,24 @@ blockquote em {
 
 .brand-mark {
   position: relative;
-  display: grid;
-  width: 34px;
-  height: 34px;
-  place-items: center;
-  border: 1px solid var(--gold-accent-light);
-  border-right-color: rgba(18, 203, 229, 0.82);
-  border-radius: 50%;
-  transform: rotate(-14deg);
-}
-
-.brand-mark::after {
-  position: absolute;
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: var(--blue-bright);
-  box-shadow: 0 0 10px rgba(18, 203, 229, 0.7);
-  content: "";
-  inset: 3px 4px auto auto;
-}
-
-.brand-mark__diamond {
-  width: 13px;
-  height: 13px;
-  border: 1px solid var(--white);
-  transform: rotate(59deg);
-}
-
-.brand-mark__diamond::after {
   display: block;
-  width: 5px;
-  height: 5px;
-  margin: 3px;
-  border: 1px solid var(--blue-bright);
-  content: "";
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  flex: 0 0 auto;
+  border: 1px solid rgba(18, 203, 229, 0.22);
+  border-radius: 50%;
+  background: #000;
+  box-shadow: 0 0 18px rgba(18, 203, 229, 0.08);
+}
+
+.brand-mark img {
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  width: 92px;
+  max-width: none;
+  transform: translateX(-50%);
 }
 
 .brand-copy {
@@ -1915,24 +1898,15 @@ blockquote em {
 
 .final-cta__brand {
   display: flex;
-  margin-top: 3rem;
-  flex-direction: column;
-  line-height: 1;
-  text-transform: uppercase;
+  margin-top: 2rem;
+  justify-content: center;
 }
 
-.final-cta__brand span {
-  color: var(--gray);
-  font-size: 0.58rem;
-  letter-spacing: 0.38em;
-}
-
-.final-cta__brand strong {
-  margin-top: 0.5rem;
-  font-family: var(--font-display);
-  font-size: clamp(1.5rem, 5vw, 2.7rem);
-  font-weight: 500;
-  letter-spacing: 0.02em;
+.final-cta__logo {
+  width: clamp(210px, 34vw, 320px);
+  aspect-ratio: 1;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 48px rgba(18, 203, 229, 0.08));
 }
 
 .final-cta__sequence {
