@@ -3,22 +3,22 @@
    ========================================================================== */
 
 :root {
-  --black: #050505;
-  --black-soft: #0a0a0a;
-  --surface: #101010;
-  --surface-light: #151515;
-  --gold-dark: #9f742b;
-  --gold: #c59b4a;
-  --gold-light: #e9ce7b;
-  --gold-highlight: #f5df95;
-  --cyan-dark: #0d6673;
-  --cyan: #27a7b6;
-  --cyan-light: #42c1cf;
-  --white: #f6f4e4;
-  --gray: #a7a7a7;
-  --gray-dark: #696969;
-  --line: rgba(246, 244, 228, 0.12);
-  --line-gold: rgba(197, 155, 74, 0.34);
+  /* 60% preto · 27% azul/ciano · 10% branco · 3% dourado */
+  --black: #020608;
+  --black-soft: #050b0f;
+  --surface: #071118;
+  --surface-light: #0b1820;
+  --blue-deep: #075468;
+  --blue: #0a9ab6;
+  --blue-bright: #12cbe5;
+  --blue-soft: #7beafa;
+  --gold-accent: #c9a75d;
+  --gold-accent-light: #e2c77a;
+  --white: #f4f8fa;
+  --gray: #a7b6bf;
+  --gray-dark: #667883;
+  --line: rgba(244, 248, 250, 0.12);
+  --line-blue: rgba(18, 203, 229, 0.28);
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-sans: "Manrope", "Segoe UI", sans-serif;
   --container: min(100% - 40px, 1240px);
@@ -43,7 +43,7 @@ body {
   min-width: 320px;
   overflow-x: hidden;
   background:
-    radial-gradient(circle at 8% 12%, rgba(39, 167, 182, 0.045), transparent 22rem),
+    radial-gradient(circle at 8% 12%, rgba(18, 203, 229, 0.055), transparent 22rem),
     var(--black);
   color: var(--white);
   font-family: var(--font-sans);
@@ -72,7 +72,7 @@ body.menu-open {
 
 ::selection {
   color: var(--black);
-  background: var(--gold-light);
+  background: var(--blue-bright);
 }
 
 a {
@@ -116,7 +116,7 @@ p {
 }
 
 :focus-visible {
-  outline: 2px solid var(--gold-light);
+  outline: 2px solid var(--blue-bright);
   outline-offset: 4px;
 }
 
@@ -127,7 +127,7 @@ p {
   left: 12px;
   padding: 10px 16px;
   transform: translateY(-150%);
-  background: var(--gold-light);
+  background: var(--blue-bright);
   color: var(--black);
   font-size: 0.8rem;
   font-weight: 700;
@@ -153,7 +153,7 @@ p {
   align-items: center;
   gap: 0.7rem;
   margin-bottom: 1.4rem;
-  color: var(--gold-light);
+  color: var(--blue-bright);
   font-size: 0.67rem;
   font-weight: 700;
   letter-spacing: 0.21em;
@@ -165,7 +165,7 @@ p {
   width: 30px;
   height: 1px;
   flex: 0 0 auto;
-  background: linear-gradient(90deg, var(--gold-dark), var(--gold-light));
+  background: linear-gradient(90deg, var(--blue-deep), var(--blue-bright));
   content: "";
 }
 
@@ -173,7 +173,8 @@ p {
   width: 3px;
   height: 3px;
   border-radius: 50%;
-  background: var(--cyan-light);
+  background: var(--gold-accent-light);
+  box-shadow: 0 0 10px rgba(226, 199, 122, 0.34);
 }
 
 h2 {
@@ -188,7 +189,7 @@ h2 {
 
 h2 em,
 blockquote em {
-  color: var(--gold-light);
+  color: var(--blue-bright);
   font-weight: 400;
 }
 
@@ -208,7 +209,7 @@ blockquote em {
   height: 100%;
   transform: scaleX(0);
   transform-origin: left;
-  background: linear-gradient(90deg, var(--cyan), var(--gold-light));
+  background: linear-gradient(90deg, var(--blue), var(--blue-bright));
 }
 
 /* Header */
@@ -230,8 +231,8 @@ blockquote em {
 
 .site-header.is-scrolled {
   height: 66px;
-  border-color: rgba(246, 244, 228, 0.07);
-  background: rgba(5, 5, 5, 0.84);
+  border-color: rgba(244, 248, 250, 0.07);
+  background: rgba(2, 6, 8, 0.86);
   backdrop-filter: blur(14px);
 }
 
@@ -259,8 +260,8 @@ blockquote em {
   width: 34px;
   height: 34px;
   place-items: center;
-  border: 1px solid rgba(233, 206, 123, 0.78);
-  border-right-color: rgba(39, 167, 182, 0.78);
+  border: 1px solid var(--gold-accent-light);
+  border-right-color: rgba(18, 203, 229, 0.82);
   border-radius: 50%;
   transform: rotate(-14deg);
 }
@@ -270,8 +271,8 @@ blockquote em {
   width: 3px;
   height: 3px;
   border-radius: 50%;
-  background: var(--cyan-light);
-  box-shadow: 0 0 10px rgba(66, 193, 207, 0.7);
+  background: var(--blue-bright);
+  box-shadow: 0 0 10px rgba(18, 203, 229, 0.7);
   content: "";
   inset: 3px 4px auto auto;
 }
@@ -279,7 +280,7 @@ blockquote em {
 .brand-mark__diamond {
   width: 13px;
   height: 13px;
-  border: 1px solid var(--gold-light);
+  border: 1px solid var(--white);
   transform: rotate(59deg);
 }
 
@@ -288,7 +289,7 @@ blockquote em {
   width: 5px;
   height: 5px;
   margin: 3px;
-  border: 1px solid var(--cyan);
+  border: 1px solid var(--blue-bright);
   content: "";
 }
 
@@ -307,7 +308,7 @@ blockquote em {
 }
 
 .brand-copy span {
-  color: var(--gold-light);
+  color: var(--blue-bright);
   font-size: 0.63rem;
   letter-spacing: 0.22em;
 }
@@ -356,9 +357,9 @@ blockquote em {
   visibility: hidden;
   opacity: 0;
   background:
-    radial-gradient(circle at 100% 20%, rgba(39, 167, 182, 0.09), transparent 23rem),
-    radial-gradient(circle at 0 90%, rgba(197, 155, 74, 0.08), transparent 22rem),
-    rgba(5, 5, 5, 0.985);
+    radial-gradient(circle at 100% 20%, rgba(18, 203, 229, 0.1), transparent 23rem),
+    radial-gradient(circle at 0 90%, rgba(10, 154, 182, 0.08), transparent 22rem),
+    rgba(2, 6, 8, 0.985);
   transition:
     visibility 0s linear 500ms,
     opacity 500ms ease;
@@ -394,7 +395,7 @@ blockquote em {
 }
 
 .mobile-menu nav a span {
-  color: var(--gold);
+  color: var(--blue);
   font-family: var(--font-sans);
   font-size: 0.6rem;
   letter-spacing: 0.16em;
@@ -452,27 +453,27 @@ blockquote em {
   transform: translateY(-2px);
 }
 
-.button--gold {
-  border-color: var(--gold-light);
-  background: linear-gradient(110deg, var(--gold-dark), var(--gold-light) 52%, var(--gold));
-  box-shadow: 0 10px 35px rgba(197, 155, 74, 0.09);
+.button--primary {
+  border-color: var(--blue-bright);
+  background: linear-gradient(110deg, var(--blue-deep), var(--blue-bright) 54%, var(--blue));
+  box-shadow: 0 10px 35px rgba(18, 203, 229, 0.12);
   color: var(--black);
 }
 
-.button--gold:hover {
-  box-shadow: 0 14px 40px rgba(197, 155, 74, 0.16);
+.button--primary:hover {
+  box-shadow: 0 14px 40px rgba(18, 203, 229, 0.2);
   filter: brightness(1.04);
 }
 
 .button--outline {
-  border-color: rgba(233, 206, 123, 0.58);
-  color: var(--gold-light);
+  border-color: rgba(18, 203, 229, 0.58);
+  color: var(--blue-bright);
   background: transparent;
 }
 
 .button--outline:hover {
-  border-color: var(--gold-light);
-  background: rgba(197, 155, 74, 0.07);
+  border-color: var(--blue-bright);
+  background: rgba(18, 203, 229, 0.07);
 }
 
 .text-link {
@@ -496,7 +497,7 @@ blockquote em {
   height: 1px;
   transform: scaleX(0);
   transform-origin: right;
-  background: var(--gold);
+  background: var(--blue-bright);
   content: "";
   transition: transform 350ms var(--ease);
 }
@@ -534,8 +535,8 @@ blockquote em {
   inset: 0;
   opacity: 0.24;
   background-image:
-    linear-gradient(rgba(246, 244, 228, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(246, 244, 228, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(244, 248, 250, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244, 248, 250, 0.04) 1px, transparent 1px);
   background-size: 96px 96px;
   mask-image: radial-gradient(circle at 70% 40%, #000, transparent 67%);
 }
@@ -546,7 +547,7 @@ blockquote em {
   right: -8vw;
   bottom: 23%;
   transform: rotate(-9deg);
-  background: linear-gradient(90deg, transparent, var(--line-gold), transparent);
+  background: linear-gradient(90deg, transparent, var(--line-blue), transparent);
 }
 
 .hero-glow {
@@ -557,20 +558,20 @@ blockquote em {
   filter: blur(12px);
 }
 
-.hero-glow--gold {
+.hero-glow--blue {
   width: 26rem;
   height: 26rem;
   top: 5%;
   right: -12rem;
-  background: radial-gradient(circle, rgba(197, 155, 74, 0.11), transparent 68%);
+  background: radial-gradient(circle, rgba(18, 203, 229, 0.12), transparent 68%);
 }
 
-.hero-glow--cyan {
+.hero-glow--deep-blue {
   width: 20rem;
   height: 20rem;
   bottom: 6%;
   left: -11rem;
-  background: radial-gradient(circle, rgba(39, 167, 182, 0.09), transparent 68%);
+  background: radial-gradient(circle, rgba(10, 154, 182, 0.1), transparent 68%);
 }
 
 .hero-layout {
@@ -617,7 +618,7 @@ blockquote em {
 
 .hero-title em {
   margin-left: clamp(0.75rem, 7vw, 5rem);
-  color: var(--gold-light);
+  color: var(--blue-bright);
   font-style: italic;
   font-weight: 400;
   line-height: 0.92;
@@ -651,7 +652,7 @@ blockquote em {
   max-width: 430px;
   margin: 1.7rem 0 0;
   padding-left: 1rem;
-  border-left: 1px solid rgba(39, 167, 182, 0.58);
+  border-left: 1px solid rgba(18, 203, 229, 0.58);
   color: var(--gray-dark);
   font-family: var(--font-display);
   font-size: 1rem;
@@ -678,16 +679,16 @@ blockquote em {
 .hero-orbit__ring--one {
   inset: 3%;
   border: 1px solid transparent;
-  border-top-color: rgba(233, 206, 123, 0.45);
-  border-right-color: rgba(233, 206, 123, 0.13);
+  border-top-color: rgba(201, 167, 93, 0.4);
+  border-right-color: rgba(201, 167, 93, 0.12);
   transform: rotate(28deg);
 }
 
 .hero-orbit__ring--two {
   inset: 16%;
   border: 1px solid transparent;
-  border-bottom-color: rgba(39, 167, 182, 0.38);
-  border-left-color: rgba(39, 167, 182, 0.08);
+  border-bottom-color: rgba(18, 203, 229, 0.42);
+  border-left-color: rgba(18, 203, 229, 0.1);
   transform: rotate(-31deg);
 }
 
@@ -698,7 +699,7 @@ blockquote em {
   top: 50%;
   left: 6%;
   transform: rotate(-26deg);
-  background: linear-gradient(90deg, transparent, rgba(233, 206, 123, 0.4), transparent);
+  background: linear-gradient(90deg, transparent, rgba(18, 203, 229, 0.44), transparent);
 }
 
 .hero-diamond {
@@ -709,18 +710,18 @@ blockquote em {
   top: 41%;
   left: 41%;
   place-items: center;
-  border: 1px solid rgba(233, 206, 123, 0.5);
+  border: 1px solid rgba(123, 234, 250, 0.54);
   transform: rotate(45deg);
-  background: rgba(5, 5, 5, 0.54);
+  background: rgba(2, 6, 8, 0.54);
   box-shadow:
-    0 0 60px rgba(197, 155, 74, 0.08),
-    inset 0 0 30px rgba(197, 155, 74, 0.04);
+    0 0 60px rgba(18, 203, 229, 0.1),
+    inset 0 0 30px rgba(18, 203, 229, 0.05);
 }
 
 .hero-diamond i {
   width: 48%;
   aspect-ratio: 1;
-  border: 1px solid rgba(39, 167, 182, 0.58);
+  border: 1px solid rgba(18, 203, 229, 0.66);
 }
 
 .hero-summary {
@@ -730,7 +731,7 @@ blockquote em {
   bottom: 0;
   left: 0;
   border-top: 1px solid var(--line);
-  background: rgba(5, 5, 5, 0.62);
+  background: rgba(2, 6, 8, 0.68);
 }
 
 .hero-summary__inner {
@@ -788,7 +789,7 @@ blockquote em {
   right: 8%;
   width: 1px;
   height: 19%;
-  background: linear-gradient(var(--line-gold), transparent);
+  background: linear-gradient(var(--line-blue), transparent);
   content: "";
 }
 
@@ -800,7 +801,7 @@ blockquote em {
 
 .section-heading--split h2 em {
   display: block;
-  color: var(--gold-light);
+  color: var(--blue-bright);
   font-style: normal;
 }
 
@@ -824,14 +825,14 @@ blockquote em {
   left: -2px;
   width: 3px;
   height: 20%;
-  background: linear-gradient(var(--cyan-light), transparent);
+  background: linear-gradient(var(--blue-bright), transparent);
   content: "";
 }
 
 .verb-sequence span {
   display: block;
   padding-block: 0.28rem;
-  color: rgba(246, 244, 228, 0.42);
+  color: rgba(244, 248, 250, 0.42);
   font-family: var(--font-display);
   font-size: clamp(2rem, 7vw, 5rem);
   letter-spacing: -0.035em;
@@ -841,19 +842,19 @@ blockquote em {
 .verb-sequence span:nth-child(2),
 .verb-sequence span:nth-child(5) {
   margin-left: 8%;
-  color: rgba(246, 244, 228, 0.62);
+  color: rgba(244, 248, 250, 0.62);
 }
 
 .verb-sequence span:nth-child(3),
 .verb-sequence span:nth-child(6) {
   margin-left: 17%;
-  color: rgba(246, 244, 228, 0.82);
+  color: rgba(244, 248, 250, 0.82);
 }
 
 .manifesto-question {
   position: relative;
   padding-top: 1.2rem;
-  border-top: 1px solid var(--line-gold);
+  border-top: 1px solid var(--line-blue);
 }
 
 .question-index {
@@ -865,7 +866,7 @@ blockquote em {
 
 .manifesto-question blockquote {
   margin: 1.5rem 0 0;
-  color: var(--gold-light);
+  color: var(--blue-bright);
   font-family: var(--font-display);
   font-size: clamp(3.7rem, 14vw, 8.5rem);
   font-style: italic;
@@ -905,7 +906,7 @@ blockquote em {
 }
 
 .copy-columns__accent em {
-  color: var(--gold-light);
+  color: var(--blue-bright);
 }
 
 /* Propósito */
@@ -914,7 +915,7 @@ blockquote em {
   overflow: hidden;
   border-block: 1px solid var(--line);
   background:
-    radial-gradient(circle at 80% 52%, rgba(197, 155, 74, 0.07), transparent 25rem),
+    radial-gradient(circle at 80% 52%, rgba(18, 203, 229, 0.08), transparent 25rem),
     var(--surface);
 }
 
@@ -930,7 +931,7 @@ blockquote em {
   aspect-ratio: 1;
   top: 9%;
   right: -26%;
-  border: 1px solid rgba(197, 155, 74, 0.14);
+  border: 1px solid rgba(18, 203, 229, 0.16);
   border-left-color: transparent;
   border-radius: 50%;
   content: "";
@@ -944,7 +945,7 @@ blockquote em {
   height: 100%;
   transform: scaleY(0);
   transform-origin: top;
-  background: linear-gradient(transparent, var(--cyan-dark), var(--gold-dark), transparent);
+  background: linear-gradient(transparent, var(--blue-deep), var(--blue-bright), transparent);
   transition: transform 1.8s var(--ease);
 }
 
@@ -986,7 +987,7 @@ blockquote em {
 }
 
 .purpose-statements p span {
-  color: var(--gold);
+  color: var(--blue);
   font-size: 0.58rem;
   letter-spacing: 0.12em;
 }
@@ -1030,7 +1031,7 @@ blockquote em {
 .chapter-number {
   display: block;
   margin-top: 2rem;
-  color: rgba(246, 244, 228, 0.08);
+  color: rgba(244, 248, 250, 0.08);
   font-family: var(--font-display);
   font-size: 7rem;
   line-height: 0.7;
@@ -1081,14 +1082,14 @@ blockquote em {
   width: 1px;
   transform: scaleY(0);
   transform-origin: top;
-  background: linear-gradient(var(--gold-light), transparent);
+  background: linear-gradient(var(--blue-bright), transparent);
   content: "";
   transition: transform 450ms var(--ease);
 }
 
 .pillar:hover {
   padding-inline: 1rem;
-  background: linear-gradient(90deg, rgba(197, 155, 74, 0.045), transparent 65%);
+  background: linear-gradient(90deg, rgba(18, 203, 229, 0.055), transparent 65%);
 }
 
 .pillar:hover::after {
@@ -1096,7 +1097,7 @@ blockquote em {
 }
 
 .pillar__number {
-  color: rgba(233, 206, 123, 0.34);
+  color: rgba(18, 203, 229, 0.42);
   font-family: var(--font-display);
   font-size: 2rem;
   line-height: 1;
@@ -1127,7 +1128,7 @@ blockquote em {
   overflow: hidden;
   border-block: 1px solid var(--line);
   background:
-    linear-gradient(115deg, rgba(39, 167, 182, 0.025), transparent 50%),
+    linear-gradient(115deg, rgba(18, 203, 229, 0.035), transparent 50%),
     var(--surface);
 }
 
@@ -1138,7 +1139,7 @@ blockquote em {
   bottom: -11rem;
   width: 28rem;
   aspect-ratio: 1;
-  border: 1px solid rgba(39, 167, 182, 0.1);
+  border: 1px solid rgba(18, 203, 229, 0.12);
   border-radius: 50%;
   content: "";
 }
@@ -1174,7 +1175,7 @@ blockquote em {
 }
 
 .audience-list span {
-  color: var(--cyan-light);
+  color: var(--blue-bright);
   font-size: 0.58rem;
   letter-spacing: 0.1em;
 }
@@ -1196,7 +1197,7 @@ blockquote em {
 
 .equation span:nth-of-type(2),
 .equation span:nth-of-type(4) {
-  color: var(--gold-light);
+  color: var(--blue-bright);
   font-style: italic;
 }
 
@@ -1207,9 +1208,9 @@ blockquote em {
   height: 28px;
   margin-block: 0.5rem;
   place-items: center;
-  border: 1px solid var(--line-gold);
+  border: 1px solid var(--line-blue);
   border-radius: 50%;
-  color: var(--cyan-light);
+  color: var(--blue-bright);
   font-family: var(--font-sans);
   font-size: 0.8rem;
   font-style: normal;
@@ -1260,7 +1261,7 @@ blockquote em {
 .not-definitions__final {
   max-width: 900px;
   padding-block: 2.4rem !important;
-  color: var(--gold-light);
+  color: var(--blue-bright);
   font-size: clamp(1.8rem, 6vw, 4rem);
 }
 
@@ -1286,8 +1287,8 @@ blockquote em {
 .human-sequence__close {
   margin-top: 2rem !important;
   padding-left: 1rem;
-  border-left: 1px solid var(--gold);
-  color: var(--gold-light) !important;
+  border-left: 1px solid var(--blue);
+  color: var(--blue-bright) !important;
 }
 
 /* Experiência premium */
@@ -1338,7 +1339,7 @@ blockquote em {
 
 .experience-rail li:hover {
   padding-left: 0.7rem;
-  color: var(--gold-light);
+  color: var(--blue-bright);
 }
 
 .experience-rail span {
@@ -1352,7 +1353,7 @@ blockquote em {
   max-width: 960px;
   margin: clamp(5rem, 12vw, 10rem) 0 0;
   padding-top: 2rem;
-  border-top: 1px solid var(--line-gold);
+  border-top: 1px solid var(--line-blue);
   font-family: var(--font-display);
   font-size: clamp(2rem, 6.8vw, 5.3rem);
   letter-spacing: -0.035em;
@@ -1399,11 +1400,11 @@ blockquote em {
 }
 
 .day--awakening::before {
-  background: var(--cyan);
+  background: var(--blue);
 }
 
 .day--building::before {
-  background: var(--gold-light);
+  background: var(--blue-bright);
 }
 
 .day header {
@@ -1426,7 +1427,7 @@ blockquote em {
 }
 
 .day header strong {
-  color: rgba(246, 244, 228, 0.17);
+  color: rgba(244, 248, 250, 0.17);
   font-family: var(--font-display);
   font-size: clamp(4.8rem, 15vw, 8rem);
   font-weight: 400;
@@ -1452,11 +1453,11 @@ blockquote em {
 }
 
 .day--awakening h3 {
-  color: var(--cyan-light);
+  color: var(--blue-bright);
 }
 
 .day--building h3 {
-  color: var(--gold-light);
+  color: var(--blue-soft);
 }
 
 .day__body > p {
@@ -1501,7 +1502,7 @@ blockquote em {
   padding-bottom: 0;
   border-top: 1px solid var(--line);
   background:
-    radial-gradient(circle at 18% 15%, rgba(39, 167, 182, 0.045), transparent 23rem),
+    radial-gradient(circle at 18% 15%, rgba(18, 203, 229, 0.055), transparent 23rem),
     var(--surface);
 }
 
@@ -1559,7 +1560,7 @@ blockquote em {
 }
 
 .direction-statement em {
-  color: var(--gold-light);
+  color: var(--blue-bright);
   font-style: italic;
   text-transform: none;
 }
@@ -1570,8 +1571,8 @@ blockquote em {
   min-height: 1600px;
   overflow: hidden;
   background:
-    radial-gradient(ellipse at 50% 48%, rgba(197, 155, 74, 0.055), transparent 30rem),
-    #030303;
+    radial-gradient(ellipse at 50% 48%, rgba(18, 203, 229, 0.065), transparent 30rem),
+    var(--black);
 }
 
 .legacy-horizon {
@@ -1580,8 +1581,8 @@ blockquote em {
   right: -20%;
   left: -20%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(233, 206, 123, 0.45), transparent);
-  box-shadow: 0 0 46px rgba(197, 155, 74, 0.12);
+  background: linear-gradient(90deg, transparent, rgba(18, 203, 229, 0.48), transparent);
+  box-shadow: 0 0 46px rgba(18, 203, 229, 0.14);
 }
 
 .legacy-intro {
@@ -1623,7 +1624,7 @@ blockquote em {
 
 .legacy-list p {
   margin: 0;
-  color: rgba(246, 244, 228, 0.45);
+  color: rgba(244, 248, 250, 0.45);
   font-family: var(--font-display);
   font-size: clamp(1.65rem, 5vw, 3.6rem);
   letter-spacing: -0.025em;
@@ -1632,12 +1633,12 @@ blockquote em {
 
 .legacy-list p:nth-child(2),
 .legacy-list p:nth-child(5) {
-  color: rgba(246, 244, 228, 0.72);
+  color: rgba(244, 248, 250, 0.72);
 }
 
 .legacy-list p:last-child {
   margin-top: 1.4rem;
-  color: var(--gold-light);
+  color: var(--blue-bright);
 }
 
 .legacy-conclusion {
@@ -1662,7 +1663,7 @@ blockquote em {
   position: relative;
   margin: clamp(9rem, 21vw, 18rem) 0 0;
   padding-block: clamp(4rem, 10vw, 8rem);
-  border-block: 1px solid var(--line-gold);
+  border-block: 1px solid var(--line-blue);
   font-family: var(--font-display);
   letter-spacing: -0.04em;
   line-height: 0.96;
@@ -1677,8 +1678,8 @@ blockquote em {
   width: 20%;
   height: 1px;
   transform: translateX(-50%);
-  background: var(--gold-light);
-  box-shadow: 0 0 24px rgba(233, 206, 123, 0.3);
+  background: var(--gold-accent-light);
+  box-shadow: 0 0 24px rgba(226, 199, 122, 0.26);
   content: "";
 }
 
@@ -1695,7 +1696,7 @@ blockquote em {
 }
 
 .event-statement strong {
-  color: var(--gold-light);
+  color: var(--blue-bright);
   font-size: clamp(2.7rem, 8.4vw, 7.2rem);
   font-weight: 400;
 }
@@ -1751,7 +1752,7 @@ blockquote em {
   bottom: -42%;
   width: 65%;
   aspect-ratio: 1;
-  border: 1px solid rgba(246, 244, 228, 0.05);
+  border: 1px solid rgba(244, 248, 250, 0.05);
   border-radius: 50%;
   content: "";
 }
@@ -1761,18 +1762,18 @@ blockquote em {
 }
 
 .ticket--master:hover {
-  border-color: rgba(39, 167, 182, 0.34);
+  border-color: rgba(18, 203, 229, 0.38);
 }
 
 .ticket--vip {
-  border-color: rgba(233, 206, 123, 0.38);
+  border-color: rgba(201, 167, 93, 0.32);
   background:
-    radial-gradient(circle at 100% 0, rgba(197, 155, 74, 0.1), transparent 21rem),
+    radial-gradient(circle at 100% 0, rgba(18, 203, 229, 0.11), transparent 21rem),
     var(--black-soft);
 }
 
 .ticket--vip:hover {
-  border-color: rgba(233, 206, 123, 0.7);
+  border-color: rgba(226, 199, 122, 0.58);
   box-shadow: 0 28px 70px rgba(0, 0, 0, 0.32);
 }
 
@@ -1781,7 +1782,7 @@ blockquote em {
   top: 0;
   right: 0;
   padding: 0.55rem 0.8rem;
-  background: var(--gold-light);
+  background: var(--gold-accent-light);
   color: var(--black);
   font-size: 0.52rem;
   font-weight: 700;
@@ -1805,7 +1806,7 @@ blockquote em {
 }
 
 .ticket--vip h3 {
-  color: var(--gold-light);
+  color: var(--blue-bright);
 }
 
 .ticket__price {
@@ -1855,7 +1856,7 @@ blockquote em {
   overflow: hidden;
   align-items: center;
   border-block: 1px solid var(--line);
-  background: #030303;
+  background: var(--black);
 }
 
 .final-cta__orbit {
@@ -1864,9 +1865,9 @@ blockquote em {
   aspect-ratio: 1;
   top: 50%;
   left: 50%;
-  border: 1px solid rgba(197, 155, 74, 0.16);
+  border: 1px solid rgba(18, 203, 229, 0.18);
   border-right-color: transparent;
-  border-bottom-color: rgba(39, 167, 182, 0.13);
+  border-bottom-color: rgba(10, 154, 182, 0.16);
   border-radius: 50%;
   transform: translate(-50%, -50%) rotate(-18deg);
 }
@@ -1880,13 +1881,13 @@ blockquote em {
 
 .final-cta__orbit::before {
   inset: 14%;
-  border: 1px solid rgba(39, 167, 182, 0.09);
+  border: 1px solid rgba(18, 203, 229, 0.11);
   border-top-color: transparent;
 }
 
 .final-cta__orbit::after {
   inset: 33%;
-  box-shadow: 0 0 140px rgba(197, 155, 74, 0.09);
+  box-shadow: 0 0 140px rgba(18, 203, 229, 0.11);
 }
 
 .final-cta__inner {
@@ -2002,7 +2003,7 @@ blockquote em {
 }
 
 .footer-bottom a span {
-  color: var(--gold);
+  color: var(--gold-accent-light);
 }
 
 .mobile-ticket-cta {
@@ -2017,8 +2018,8 @@ blockquote em {
   align-items: center;
   justify-content: center;
   transform: translateY(calc(100% + 24px));
-  border: 1px solid var(--gold-light);
-  background: linear-gradient(110deg, var(--gold-dark), var(--gold-light) 52%, var(--gold));
+  border: 1px solid var(--blue-bright);
+  background: linear-gradient(110deg, var(--blue-deep), var(--blue-bright) 54%, var(--blue));
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
   color: var(--black);
   font-size: 0.65rem;
@@ -2044,8 +2045,8 @@ blockquote em {
   visibility: hidden;
   transform: translateY(18px);
   opacity: 0;
-  border: 1px solid var(--line-gold);
-  background: rgba(10, 10, 10, 0.96);
+  border: 1px solid var(--line-blue);
+  background: rgba(5, 11, 15, 0.96);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
   color: var(--white);
   font-size: 0.78rem;
@@ -2217,12 +2218,12 @@ blockquote em {
     display: inline-flex;
     min-height: 42px;
     padding: 0.55rem 0.9rem;
-    border-color: rgba(233, 206, 123, 0.54);
-    color: var(--gold-light);
+    border-color: rgba(18, 203, 229, 0.56);
+    color: var(--blue-bright);
   }
 
   .button--header:hover {
-    background: var(--gold-light);
+    background: var(--blue-bright);
     color: var(--black);
   }
 
@@ -2255,7 +2256,7 @@ blockquote em {
   .hero-index__line {
     width: 1px;
     height: 90px;
-    background: linear-gradient(var(--gold), transparent);
+    background: linear-gradient(var(--gold-accent), transparent);
   }
 
   .hero-content {
@@ -2299,7 +2300,7 @@ blockquote em {
     height: 14px;
     top: 10px;
     left: 19px;
-    background: var(--gold);
+    background: var(--blue-bright);
     content: "";
     animation: scroll-pulse 2.2s ease-in-out infinite;
   }
@@ -2528,7 +2529,7 @@ blockquote em {
   .manifesto-question {
     padding-left: 2rem;
     border-top: 0;
-    border-left: 1px solid var(--line-gold);
+    border-left: 1px solid var(--line-blue);
   }
 
   .event-statement {
