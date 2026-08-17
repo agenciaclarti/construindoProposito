@@ -2311,6 +2311,14 @@ blockquote em {
     writing-mode: vertical-rl;
   }
 
+  .hero-index__logo {
+    writing-mode: horizontal-tb;
+  }
+
+  .hero-index__count {
+    writing-mode: vertical-rl;
+  }
+
   .hero-index__line {
     width: 1px;
     height: 90px;
