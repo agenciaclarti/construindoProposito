@@ -690,6 +690,35 @@ blockquote em {
   line-height: 1.7;
 }
 
+.access-alert {
+  display: grid;
+  max-width: 680px;
+  margin-bottom: 1.6rem;
+  padding: 1rem 1.15rem;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.9rem;
+  border: 1px solid rgba(226, 199, 122, 0.42);
+  background: rgba(201, 167, 93, 0.07);
+}
+
+.access-alert strong {
+  color: var(--gold-accent-light);
+  font-size: 0.58rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.access-alert p {
+  margin: 0;
+  color: var(--gray);
+  font-size: 0.72rem;
+}
+
+.access-alert b {
+  color: var(--white);
+}
+
 .hero-actions {
   display: flex;
   align-items: stretch;
@@ -1632,10 +1661,36 @@ blockquote em {
 }
 
 .day header > span {
+  display: grid;
+  justify-items: end;
+  gap: 0.45rem;
   color: var(--gray);
   font-size: 0.62rem;
   letter-spacing: 0.12em;
   text-align: right;
+  text-transform: uppercase;
+}
+
+.day header small {
+  color: var(--blue-bright);
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.day--vip {
+  background: linear-gradient(145deg, rgba(201, 167, 93, 0.055), transparent 48%);
+}
+
+.day__exclusive {
+  display: inline-flex;
+  margin-bottom: 1.4rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid rgba(226, 199, 122, 0.38);
+  color: var(--gold-accent-light);
+  font-size: 0.54rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
 }
 
@@ -2007,7 +2062,7 @@ blockquote em {
 
 .ticket__price {
   display: flex;
-  margin: 3.2rem 0;
+  margin: 2.6rem 0 1.8rem;
   align-items: flex-start;
   font-family: var(--font-display);
 }
@@ -2033,8 +2088,68 @@ blockquote em {
 }
 
 .ticket__details {
-  min-height: 1px;
-  margin-top: auto;
+  display: grid;
+  margin: 1.4rem 0 2.2rem;
+  padding: 0;
+  gap: 0.7rem;
+  list-style: none;
+}
+
+.ticket__access {
+  display: grid;
+  padding: 1rem 0;
+  gap: 0.35rem;
+  border-block: 1px solid var(--line);
+}
+
+.ticket__access strong {
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+.ticket__access span {
+  color: var(--gray);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.ticket__access--vip {
+  border-color: rgba(226, 199, 122, 0.28);
+}
+
+.ticket__access--vip span {
+  color: var(--gold-accent-light);
+}
+
+.ticket__details li {
+  position: relative;
+  padding-left: 1.25rem;
+  color: var(--gray);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+.ticket__details li::before {
+  position: absolute;
+  top: 0.1rem;
+  left: 0;
+  color: var(--blue-bright);
+  content: "+";
+  font-weight: 700;
+}
+
+.ticket__details .is-not-included {
+  color: var(--gold-accent-light);
+  font-weight: 700;
+}
+
+.ticket__details .is-not-included::before {
+  color: var(--gold-accent-light);
+  content: "–";
 }
 
 .ticket .button {
@@ -2814,6 +2929,11 @@ blockquote em {
 
   .mobile-menu__footer .button {
     width: 100%;
+  }
+
+  .access-alert {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
   }
 }
 
