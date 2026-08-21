@@ -1,10 +1,5 @@
 "use strict";
 
-const EVENT_CONFIG = {
-  masterCheckoutUrl: "",
-  vipCheckoutUrl: ""
-};
-
 document.documentElement.classList.remove("no-js");
 document.documentElement.classList.add("js");
 
@@ -62,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     isOpen ? closeMenu() : openMenu();
   });
 
-  mobileMenu?.querySelectorAll('a[href^="#"]').forEach((link) => {
+  mobileMenu?.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => closeMenu({ restoreFocus: false }));
   });
 
@@ -177,20 +172,6 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     sections.forEach((section) => activeObserver.observe(section));
   }
-
-  document.querySelectorAll("[data-checkout]").forEach((button) => {
-    button.addEventListener("click", () => {
-      const ticket = button.getAttribute("data-checkout");
-      const url = ticket === "vip" ? EVENT_CONFIG.vipCheckoutUrl : EVENT_CONFIG.masterCheckoutUrl;
-
-      if (!url) {
-        showToast("O link de compra deste ingresso será disponibilizado em breve.");
-        return;
-      }
-
-      window.location.assign(url);
-    });
-  });
 
   document.querySelectorAll("[data-placeholder-link]").forEach((link) => {
     link.addEventListener("click", (event) => {

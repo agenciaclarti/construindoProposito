@@ -24,9 +24,16 @@ if (!html.includes('lang="pt-BR"')) failures.push("Idioma principal não definid
 if (!html.includes('type="application/ld+json"')) failures.push("Schema Event ausente.");
 if (!html.includes('name="description"')) failures.push("Meta description ausente.");
 if (!css.includes("@media (prefers-reduced-motion: reduce)")) failures.push("Tratamento de movimento reduzido ausente.");
-if (!script.includes('masterCheckoutUrl: ""') || !script.includes('vipCheckoutUrl: ""')) {
-  failures.push("Configuração de checkout não está segura para URLs vazias.");
+const whatsappUrl = "https://wa.me/message/ZZL4J3ALCNZTA1";
+const whatsappCtas = [...html.matchAll(/<a\b[^>]*data-whatsapp-cta[^>]*>/g)];
+if (whatsappCtas.length !== 8) failures.push("Os oito CTAs principais devem direcionar ao WhatsApp.");
+if (whatsappCtas.some(([cta]) => !cta.includes(`href="${whatsappUrl}"`))) {
+  failures.push("Há CTA do WhatsApp com link incorreto.");
 }
+if (whatsappCtas.some(([cta]) => !cta.includes('target="_blank"') || !cta.includes('rel="noopener noreferrer"'))) {
+  failures.push("CTAs do WhatsApp devem abrir com segurança em nova aba.");
+}
+if (!html.includes('src="assets/whatsapp-official.svg"')) failures.push("Ícone oficial do WhatsApp ausente.");
 
 const openBraces = (css.match(/{/g) || []).length;
 const closeBraces = (css.match(/}/g) || []).length;
